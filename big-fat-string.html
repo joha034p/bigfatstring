@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Fat String</title>
+</head>
+<body>
+    <input type="text" placeholder="Type something here..." name="input" id="input">
+    <select name="dropDown" id="dropDown">
+        <option value="firstCap">If input is a first name: Make the first character in a name uppercase, and the rest lowercase</option>
+        <option value="firstName">If input is a full name: Find the first name</option>
+        <option value="firstNameLength">If input is a full name: Find the length of the first name</option>
+        <option value="midNamePos">If input is a full name: Find the middle name start and end position, and the middle name itself in a full name string</option>
+        <option value="fileName">If input is a filename: Check if a filename is .png or .jpg</option>
+        <option value="password">If input is a password: Hide a password with the correct number of *s</option>
+        <option value="thirdCap">With any input: Make the third character in a name uppercase</option>
+        <option value="spaceHyphenCap">With any input: Make a character uppercase, if it follows a space or a hyphen</option>
+    </select>
+    <input type="text" placeholder="Output goes here..." name="output" id="output">
+    <br>
+    <button>Generate output</button>
+
+    <script>
+        "use strict";
+        document.querySelector("button").addEventListener("mousedown", readInput);
+
+        function readInput() {
+            let inputValue = document.querySelector("#input").value;
+            let dropDownValue = document.querySelector("#dropDown").value;
+            if(dropDownValue === "firstCap"){
+            if(!inputValue.includes(" ")){
+                console.log("first name");
+            }
+        }
+            
+            if(dropDownValue === "firstName"){
+            if(inputValue.includes(" ")){
+                console.log("full name");
+            }
+        }
+
+            if(dropDownValue === "firstNameLength"){
+            if(inputValue.includes(" ")){
+                console.log("full name");
+            }
+        }
+
+            if(dropDownValue === "midNamePos"){
+            if(inputValue.includes(" ")){
+                console.log("full name");
+            }
+        }
+
+            if(dropDownValue === "fileName"){
+            if(inputValue.includes(".jpg") || inputValue.includes(".png")){
+                console.log("file name");
+            }
+        }
+
+            if(dropDownValue === "password"){
+            if(inputValue.includes(".jpg") || inputValue.includes(".png")){
+                console.log("file name");
+            }
+        }
+
+            generateOutput();
+        }
+
+        function generateOutput() {
+            let output = document.querySelector("#output");
+            
+        }
+
+    </script>
+</body>
+</html>
